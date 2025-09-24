@@ -1,0 +1,395 @@
+/* Modern UI Styles */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.editor-container {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+/* Form Styles */
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+    color: #2c3e50;
+}
+
+input[type="number"],
+input[type="text"],
+textarea {
+    width: 100%;
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+    transition: border-color 0.2s;
+}
+
+input[type="number"]:focus,
+input[type="text"]:focus,
+textarea:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.1);
+}
+
+/* Button Styles */
+button {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.primary-btn {
+    background-color: #007bff;
+    color: white;
+}
+
+.primary-btn:hover {
+    background-color: #0056b3;
+}
+
+.secondary-btn {
+    background-color: #6c757d;
+    color: white;
+}
+
+.secondary-btn:hover {
+    background-color: #545b62;
+}
+
+/* Navigation Controls */
+.page-controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 15px 0;
+}
+
+.page-controls button {
+    padding: 5px 10px;
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    color: #495057;
+}
+
+.page-controls button:hover {
+    background-color: #e9ecef;
+}
+
+/* Preview Section */
+.preview-container {
+    position: relative;
+    background: white;
+    /* padding: 15px; */
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#pdfPreview {
+    max-width: 100%;
+    display: block;
+    margin: 0;
+    border-radius: 4px;
+}
+
+/* Text History Section */
+.text-history-container {
+    margin-top: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.text-history-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+    background-color: #f8f9fa;
+    border-radius: 8px 8px 0 0;
+}
+
+.text-history-header h3 {
+    margin: 0;
+    color: #2c3e50;
+    font-size: 18px;
+}
+
+.text-history {
+    max-height: 300px;
+    overflow-y: auto;
+    padding: 10px;
+}
+
+.text-entry {
+    background: #fff;
+    border: 1px solid #eee;
+    border-radius: 4px;
+    padding: 12px;
+    margin-bottom: 10px;
+    transition: all 0.2s;
+}
+
+.text-entry:hover {
+    border-color: #007bff;
+    box-shadow: 0 2px 4px rgba(0, 123, 255, 0.1);
+}
+
+.text-entry-content {
+    margin-bottom: 8px;
+}
+
+.text-entry-text {
+    font-size: 15px;
+    color: #2c3e50;
+    margin-bottom: 5px;
+}
+
+.text-entry-details {
+    font-size: 12px;
+    color: #6c757d;
+}
+
+.text-entry-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    align-items: center;
+}
+
+.delete-btn {
+    background-color: #dc3545;
+    color: white;
+    padding: 4px 8px;
+    font-size: 12px;
+}
+
+.delete-btn:hover {
+    background-color: #c82333;
+}
+
+.clear-all-btn {
+    background-color: #dc3545;
+    color: white;
+    padding: 6px 12px;
+    font-size: 13px;
+}
+
+.clear-all-btn:hover {
+    background-color: #c82333;
+}
+
+.import-btn,
+.export-btn {
+    padding: 6px 12px;
+    font-size: 13px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.import-btn {
+    background-color: #28a745;
+    color: white;
+}
+
+.import-btn:hover {
+    background-color: #218838;
+}
+
+.export-btn {
+    background-color: #17a2b8;
+    color: white;
+}
+
+.export-btn:hover {
+    background-color: #138496;
+}
+
+/* Error Container */
+.error-container {
+    margin: 10px 0;
+    padding: 12px 15px;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.error-container.show {
+    background-color: #f8d7da;
+    border: 1px solid #f5c6cb;
+    color: #721c24;
+}
+
+.error-container.success {
+    background-color: #d4edda;
+    border: 1px solid #c3e6cb;
+    color: #155724;
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* Zoom Controls */
+.zoom-controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 10px 0;
+}
+
+.zoom-controls button {
+    padding: 5px 10px;
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    color: #495057;
+}
+
+.zoom-controls button:hover {
+    background-color: #e9ecef;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .editor-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .preview-container {
+        margin-top: 20px;
+    }
+}
+
+/* File Input Styling */
+.file-input-container {
+    margin-bottom: 20px;
+}
+
+.file-input-container input[type="file"] {
+    display: none;
+}
+
+.file-input-container label {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.file-input-container label:hover {
+    background-color: #0056b3;
+}
+
+/* Coordinates Group */
+.coordinates-group {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.coordinates-group .form-group {
+    margin-bottom: 0;
+}
+
+/* Upload Section */
+.upload-section {
+    margin-bottom: 20px;
+}
+
+/* Edit Section */
+.edit-section {
+    margin-bottom: 20px;
+}
+
+/* Page Navigation */
+.page-navigation {
+    margin: 15px 0;
+}
+
+/* Page Controls */
+.page-controls input {
+    width: 60px;
+    text-align: center;
+}
+
+/* Zoom Level */
+#zoomLevel {
+    min-width: 60px;
+    text-align: center;
+}
+
+/* Preview Overlay */
+#previewOverlay {
+    position: absolute;
+    pointer-events: none;
+    color: rgba(0, 0, 0, 0.7);
+    white-space: nowrap;
+    transform-origin: left top;
+    z-index: 100;
+    font-family: Arial, sans-serif;
+}
+
+/* Text Entry Selected */
+.text-entry.selected {
+    background-color: #e8f4ff;
+    border-left: 3px solid #007bff;
+}
+
+/* Highlight Effect for Form Fields */
+@keyframes highlightField {
+    0% { border-color: #ddd; }
+    50% { border-color: #007bff; }
+    100% { border-color: #ddd; }
+}
+
+.highlight-field {
+    animation: highlightField 1s ease;
+}

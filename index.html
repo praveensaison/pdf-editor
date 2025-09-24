@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF Text Editor</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>PDF Text Editor</h1>
+        
+        <div class="file-input-container">
+            <input type="file" id="pdfFile" accept=".pdf">
+            <label for="pdfFile" class="file-label">Choose PDF File</label>
+            <button id="loadPdfBtn" class="primary-btn">Load PDF</button>
+        </div>
+
+        <div class="editor-container">
+            <div class="edit-section" id="editSection" style="display: none;">
+                <div id="errorContainer" class="error-container"></div>
+                
+                <div class="form-group">
+                    <label for="textContent">Text Content:</label>
+                    <textarea id="textContent" rows="3" accept-charset="UTF-8"></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label for="keyName">Key Name:</label>
+                    <input type="text" id="keyName" placeholder="Enter a key name">
+                </div>
+                
+                <div class="coordinates-group">
+                    <div class="form-group">
+                        <label for="xCoord">X Position:</label>
+                        <input type="number" id="xCoord" value="50">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="yCoord">Y Position:</label>
+                        <input type="number" id="yCoord" value="50">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="fontSize">Font Size:</label>
+                        <input type="number" id="fontSize" value="12">
+                    </div>
+                </div>
+                
+                <div class="page-controls">
+                    <button id="prevPage" class="secondary-btn">&lt; Previous</button>
+                    <span>Page <input type="number" id="pageNumber" value="1" min="1" style="width: 50px;"> of <span id="pageCount">0</span></span>
+                    <button id="nextPage" class="secondary-btn">Next &gt;</button>
+                </div>
+                
+                <div class="zoom-controls">
+                    <button id="zoomOut" class="secondary-btn">-</button>
+                    <span id="zoomLevel">100%</span>
+                    <button id="zoomIn" class="secondary-btn">+</button>
+                </div>
+                
+                <div class="action-buttons">
+                    <button id="addTextBtn" class="primary-btn">Add Text</button>
+                    <button id="reloadBtn" class="primary-btn">Reload PDF</button>
+                    <button id="saveBtn" class="primary-btn">Save PDF</button>
+                </div>
+
+                <div class="text-history-container" id="textHistoryContainer">
+                    <div class="text-history-header">
+                        <h3>Text History</h3>
+                        <div class="text-history-actions">
+                            <input type="file" id="importJson" accept=".json" style="display: none;">
+                            <label for="importJson" class="import-btn">Import JSON</label>
+                            <button id="exportJson" class="export-btn">Export JSON</button>
+                            <button id="clearAllBtn" class="clear-all-btn">Clear All</button>
+                        </div>
+                    </div>
+                    <div id="textHistory" class="text-history"></div>
+                </div>
+            </div>
+
+            <div class="preview-container">
+                <canvas id="pdfPreview"></canvas>
+                <div id="previewOverlay"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/pdf-lib/dist/pdf-lib.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/pdfjs-dist@2.12.313/build/pdf.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/downloadjs/1.4.8/download.min.js"></script>
+    <script>pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdn.jsdelivr.net/npm/pdfjs-dist@2.12.313/build/pdf.worker.min.js';</script>
+    <script src="/src/pdfEditor.js"></script>
+</body>
+</html>
