@@ -1,0 +1,21 @@
+{
+    "name": "pdf-text-editor",
+    "version": "1.0.0",
+    "description": "A browser-based PDF text editor",
+    "main": "index.html",
+    "scripts": {
+        "dev": "live-server --port=3000 --open=/index.html",
+        "start": "npm run dev"
+    },
+    "devDependencies": {
+        "live-server": "^1.2.2"
+    },
+    "keywords": [
+        "pdf",
+        "editor",
+        "text",
+        "web"
+    ],
+    "author": "",
+    "license": "MIT"
+}

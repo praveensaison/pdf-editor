@@ -22,7 +22,6 @@ class PDFEditor {
 
     initElements() {
         this.fileInput = document.getElementById('pdfFile');
-        this.loadButton = document.getElementById('loadPdfBtn');
         this.editSection = document.getElementById('editSection');
         this.errorContainer = document.getElementById('errorContainer');
         this.textContent = document.getElementById('textContent');
@@ -503,6 +502,12 @@ class PDFEditor {
             // Enable editing section
             this.editSection.style.display = 'block';
             
+            // Add has-pdf class to preview container
+            const previewContainer = document.querySelector('.preview-container');
+            if (previewContainer) {
+                previewContainer.classList.add('has-pdf');
+            }
+            
             // Show first page
             await this.previewPage(1);
             
@@ -519,7 +524,7 @@ class PDFEditor {
     }
 
     bindEvents() {
-        this.loadButton.addEventListener('click', () => this.loadPDF());
+        this.fileInput.addEventListener('change', () => this.loadPDF());
         this.addTextButton.addEventListener('click', () => this.addText());
         this.saveButton.addEventListener('click', () => this.savePDF());
         this.prevPage.addEventListener('click', () => this.changePage(-1));
