@@ -159,9 +159,9 @@ button {
     position: relative;
     background: #f8fafc;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 24px;
+    align-items: start;
+    justify-content: start;
+    padding: 0px;
     min-height: 600px;
 }
 
